@@ -1,0 +1,158 @@
+\documentclass[12pt,letterpaper]{article}
+
+\usepackage[latin1]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{fancyhdr} % Required for custom headers
+\usepackage{lastpage} % Required to determine the last page for the footer
+\usepackage{extramarks} % Required for headers and footers
+\usepackage[usenames,dvipsnames]{color} % Required for custom colors
+\usepackage{listings} % Required for insertion of code
+\usepackage{courier} % Required for the courier font
+\usepackage{multirow}
+\usepackage{hyperref}
+\usepackage[left=4cm,right=2cm,top=2cm,bottom=2cm]{geometry}
+
+% Margins
+\topmargin=-0.45in
+\evensidemargin=0in
+\oddsidemargin=0in
+\textwidth=6.5in
+\textheight=9.0in
+\headsep=0.25in
+
+\linespread{1.1} % Line spacing
+\newcommand{\horrule}[1]{\rule{\linewidth}{#1}}
+
+% Creates a new command to include a perl script, the first parameter is the filename of the script (without .pl), the second parameter is the caption
+\newcommand{\perlscript}[2]{
+\begin{itemize}
+\item[]\lstinputlisting[caption=#2,label=#1]{#1.cs}
+\end{itemize}
+}
+
+\author{Santiago Vásquez}
+
+\begin{document}
+
+\begin{tabular}{l l}
+\multirow{5}{*}{\includegraphics[width=2cm]{../recursos/logo.png}}
+ & Universidad del Istmo de Guatemala \\
+ & Facultad de Ingeniería \\
+ & Informática 1 \\
+ & Henry Santiago Vásquez Alvizures \\
+ & ID: 20181106 \\
+\end{tabular}
+
+\begin{center}
+	\horrule{0.5pt}
+	\huge{Hoja de Trabajo \#2} \\
+	\large{Fecha: 02 de Agosto, 2018 } \\
+    \horrule{1pt}
+\end{center}
+
+\emph{Instrucciones: Resolver cada uno de los ejercicios siguiendo sus respectivas
+instrucciones. El trabajo debe ser entregado a traves de Github, en su repositorio del curso, colocado en una carpeta llamada "Hoja de trabajo 2".
+Al menos que la pregunta indique diferente, todas las respuestas a preguntas escritas deben presentarse en
+un documento formato pdf, el cual haya sido generado mediante Latex. }
+
+% \perlscript{homework_example}{Sample Perl Script With Highlighting}
+\section*{Ejercicio \#1 }
+
+\begin{flushleft}
+	Demostrar utilizando inducci\'on:
+		\[
+       		 \forall\ n.\ n^3\geq n^2
+		\]
+	\\donde $n\in\mathbb{N}$
+	\\
+	{\bf Respuesta: } \\
+	Caso base:
+		\[
+       		 n = 0, 0^3\geq 0^2
+		\]
+		\[
+       		  0\geq 0
+		\]
+	Por hipótesis inductiva:
+		\[
+       		 (n+1)*(n+1)^2 \geq (n+1)^2
+       		 
+		\]
+		\[
+				(n+1)\geq(n+1)^2/(n+1)^2
+		\]
+		\[
+				(n+1)\geq 1
+		\]	
+		\[
+				(n+1)-1\geq 1-1
+		\]
+		\[
+				n \geq 0
+		\]		
+	
+	
+	
+\end{flushleft}
+
+
+\section*{Ejercicio \#2}
+\begin{flushleft}
+	Demostrar utilizando inducci\'on la desigualdad de Bernoulli:
+		\[
+        	\forall\ n.\ (1+x)^n\geq nx
+		\]
+		\\donde $n\in \mathbb{N}$, $x\in \mathbb{Q}$ y $x\geq -1$
+		\\
+		
+		
+	{\bf Respuesta: } \\
+	Caso base:
+		\[
+       		 n = 0,  (1+x)^n\geq nx\\ pero\ sabemos\ que\ también\ (1+x)^n\geq nx +1 
+		\]
+		\[
+       		 Entonces,\    (1+x)^0\geq (0)x +1
+		\]
+		\[
+       		    		   1\geq 1
+		\]
+		Por hipótesis inductiva:
+		\[
+       		 Suponesmos\ que\ (1+x)^n\geq nx +1
+		\]
+		\[
+       		 Entonces,\    (1+x)^0\geq (0)x +1
+		\]
+		\[
+        	 x\geq -1\ esto\ implica\ que\ x+1\geq 0
+		\]
+		\[
+       		 (1+x)^n\ (1+x)\geq (1+nx)\ (1+x)
+		\]
+		\[
+				(1+x)^{n+1}\geq{(1+nx)(1+x)}=1+(n+1)x+nx^2
+		\]
+		\[
+				nx^2\geq 0
+		\]
+		\[
+				(1+x)^{n+1}\geq{1+(n+1)x
+		\]
+
+La desigualdad se hace evidente para n+1 porque sabemos que $nx^2$ es un número 		positivo.
+	
+	
+		
+\end{flushleft}
+{\bf Consejo: }Es possible demostrar esto demostrando una propiedad m\'as fuerte
+donde el lado izquierdo es mayor que $nx + 1$
+
+
+
+
+\end{document}
