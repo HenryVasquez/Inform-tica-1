@@ -34,22 +34,22 @@
 \end{itemize}
 }
 
-\author{Santiago Va\'squez}
+\author{Santiago V�squez}
 
 \begin{document}
 
 \begin{tabular}{l l}
 \multirow{5}{*}{\includegraphics[width=2cm]{../recursos/logo.png}}
  & Universidad del Istmo de Guatemala \\
- & Facultad de Ingenieri\'a \\
- & Inform\'atica 1 \\
- & Henry Santiago Vásquez Alvizures \\
+ & Facultad de Ingenier�a \\
+ & Inform�tica 1 \\
+ & Henry Santiago V�squez Alvizures \\
  & ID: 20181106 \\
 \end{tabular}
 
 \begin{center}
 	\horrule{0.5pt}
-	\huge{Repetici\'on Examen Parcial \#1} \\
+	\huge{Repetici�n Examen Parcial \#1} \\
 	\large{Fecha: 14 de agosto, 2018 } \\
     \horrule{1pt}
 \end{center}
@@ -58,10 +58,10 @@
 
 \section*{Problema \#1: Definir el conjunto de nodos }
 \begin{enumerate}
-	\item{Tomando las islas como nodos y coloc\'andoles a cada una una etiqueta con A, B, C o D, podemos definir entonces el conjunto:} \\
+	\item{Tomando las islas como nodos y coloc�ndoles a cada una una etiqueta con A, B, C o D, podemos definir entonces el conjunto:} \\
 	{\bf Respuesta:} $\{A, B , C, D\}$
 	
- 	\item{El conjunto de v\'ertices del grafo} \\
+ 	\item{El conjunto de v�rtices del grafo} \\
 	{\bf Respuesta:} \\
 	\begin{tabular}{p{6cm} c}
     $$
@@ -74,11 +74,8 @@
 	$$\\
 	\end{tabular}
 \end{enumerate}
-
 \section*{Problema \#2: }
-\begin{flushleft}
-	Demostrar utilizando inducci\'on que la formula de Gauss para 		    sumatorias es correcta:
-\end{flushleft}
+Demostrar utilizando inducci\'on que la formula de Gauss para sumatorias es correcta:
 \[
         \sum_{i=1}^{n}{i}=\frac{n(n+1)}{2}       
 \]
@@ -90,45 +87,43 @@ Por caso inductivo
 \[ 
         \sum_{i=1}^{n}{i}=\frac{n(n+1)}{2} 
 \]
-Verificamos que se cumpla para = n + 1: 
+Se supone que n = k: 
 \[        
-        \sum_{i=1}^{n+1}{i}=\frac{(n+1)((n+1)+1)}{2}       
+        1+2+3+...+k=  \frac{k(k+1)}{2}    
+\]
+Verificamos que se cumpla para = k + 1: 
+\[        
+        \sum_{i=1}^{k+1}{i}=\frac{(k+1)((k+1)+1)}{2}       
 \]
 \[        
-        =\frac{(n+1)((n+2)}{2}       
+        =\frac{(k+1)((k+2)}{2}       
 \]
 \[        
-		\sum_{i=1}^{n+1}{i}= 1+2+3+...+n+n+1       
+		\sum_{i=1}^{k+1}{i}= 1+2+3+...+k+k+1       
 \]
 \[        
-		\frac{n(n+1)}{2}  + n +1
+		\frac{k(k+1)}{2}  + k +1
 \]
 \[        
-		\frac{n(n+1)+2(n+1)}{2}
+		\frac{k(k+1)+2(k+1)}{2}
 \]
 \[        
-		\frac{(n+1)+(n+2)}{2}
+		\frac{(k+1)+(k+2)}{2}
 \]
 Se cumple entonces que: 
 \[ 
         \sum_{i=1}^{n}{i}=\frac{n(n+1)}{2} 
 \]
 
-\begin{flushleft}
-donde $\sum_{i=1}^{n}i=1+2+3+4+\ \ldots\ +n$.\\
-
+donde $\sum_{i=1}^{n}i=1+2+3+4+\ \ldots\ +n$.
+\\\\
 Para esta demostraci\'on, su caso base debe ser
 $n=1$ en vez de $n=0$. Sin embargo, la demostraci\'on
 del caso inductivo procede de la misma forma que
 se ha estudiado en clase.
-\end{flushleft}
-
-
 \section*{Problema \#3: }
 
-\begin{flushleft}
 Dada la funci\'on $a\geq b$ para numeros naturales unarios:
-\end{flushleft}
 \[
         a\geq b =
                 \left\{
@@ -144,14 +139,11 @@ Dada la funci\'on $a\geq b$ para numeros naturales unarios:
 \]
 
 \section*{Problema \#4: }
-\begin{flushleft}
 Demostrar por medio de inducci\'on la comutatividad de la suma de
-n\'umeros naturales unarios: $a\oplus b = b\oplus a$ \\
+numeros naturales unarios: $a\oplus b = b\oplus a$ \\
 
-Inducci\'on sobre \emph{a}:\\
-Caso base: \\
-Demostrar \textbf{P(0)= 0 + b = b + 0}
-\end{flushleft}
+Inducci�n sobre a:\\
+Caso base: Demostrar P(0)= 0 + b = b + 0
 
 \[
 		0 + b = b 
@@ -159,19 +151,14 @@ Demostrar \textbf{P(0)= 0 + b = b + 0}
 \[
 		 = b + 0 
 \]
-\begin{flushleft}
-Por hip\'otesis de inducci\'on:\\
-Suponemos que \textbf{P(a)= a + b = b + a}\\
-Paso Inductivo:\\
-Demostrar \textbf{P(s(a))= s(a) + b = b + s(a)}\\
-Tomando el lado derecho:
-\end{flushleft}
 
+Por hip�tesis de inducci�n:\\
+Suponemos que P(a)= a + b = b + a\\
+Paso Inductivo: Demostrar P(s(a))= s(a) + b = b + s(a)\\
+Tomando el lado derecho:
 \[
-	 b + s(a) = s (a + b)	 
-\]
-\[
-	  = s (a + b)
+	 b + s(a) = s (a + b)
+	 = s (a + b) 
 \]
 
 \section*{Problema \#5: }
@@ -190,5 +177,7 @@ Tomando el lado derecho:
 \[
 	s(0)\geq  0
 \]
+
+
 
 \end{document}
