@@ -1,0 +1,145 @@
+\documentclass[12pt,letterpaper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{graphicx}
+\usepackage[left=4cm,right=2cm,top=2cm,bottom=2cm]{geometry}
+\author{Henry Santiago Vásquez Alvizures}
+\title{Hoja de Trabajo No. 3}
+\begin{document}
+\maketitle 
+\section{Ejercicio \#1}
+\begin{flushleft}
+	$ s(s(s(s(0))))  \oplus s(s(s(0))) $\\
+	$ s(s(s(s(s(0)))))  \oplus s(s(0)) $\\
+	$ s(s(s(s(s(s(0))))))  \oplus s(0) $\\
+	$ s(s(s(s(s(s(s(0 \oplus 0)))))))  $\\
+	$ s(s(s(s(s(s(s(0)))))))  $\\
+\end{flushleft}
+\section{Ejercicio \#2}
+\begin{flushleft}
+	$ s(i) \oplus (s(i) \otimes j) $\\
+\end{flushleft}
+\section{Ejercicio \#3}
+\begin{itemize}
+	\item{$s(s(s(0)))\otimes 0$}\\
+	Por definición sabemos que cualquier número multiplicado por 0 es igual a 0.\\
+	Entonces: $s(s(s(0)))\otimes 0 = 0$
+	
+	\item{$s(s(s(0)))\otimes s(0)$}
+	\[
+		s(s(s(0))) \oplus (s(s(s(0))) \otimes 0)\\	
+	\]
+	\[
+		s(s(s(0))) \oplus (0)\\	
+	\]
+	\[
+		s(s(s(0+0)))\\	
+	\]
+	\[
+		s(s(s(0)))\\	
+	\]
+	
+	\item{$s(s(s(0))) \otimes s(s(0))$}	
+	\[
+		s(s(s(0))) \oplus (s(s(s(0))) \otimes s(0))
+	\]
+	\[
+		s(s(s(0))) \oplus (s(s(s(0))) \otimes s(0))
+	\]
+	\[
+		s(s(s(0))) \oplus s(s(s(0)))
+	\]
+	\[
+		s(s(s(s(0)))) \oplus s(s(0))
+	\]
+	\[
+		s(s(s(s(s(0))))) \oplus s(0)
+	\]
+	\[
+		s(s(s(s(s(s(0 + 0)))))) 
+	\]
+	\[
+		s(s(s(s(s(s(0)))))) 
+	\]
+	
+\end{itemize}
+\section{Ejercicio \#4}
+\begin{itemize}
+		\item{$a\oplus s(s(0))=s(s(a))$}
+		\[
+			s(s(a + 0)) = s(s(a))
+		\]
+		\[
+			s(s(a)) = s(s(a))
+		\]
+		
+        \item{$a \otimes b = b \otimes a$}\\
+        Caso base: a = 0
+        \[
+			0 \otimes b = b \otimes 0
+        \]
+        \[
+			0 = 0
+        \]
+        Hi Inductiva: a = n + 1
+        \[
+			(n + 1) \otimes b = b \otimes (n + 1)			       
+        \]
+        \[
+			nb + b = bn + b        
+        \]
+        \[
+			nb + b = bn + b        
+        \]
+        \[
+			nb + b - b = bn + b - b        
+        \]
+        \[
+			nb = bn       
+        \]
+        \item{$a \otimes (b \otimes c)=(a\otimes b)\otimes c$}
+        Caso base: c = 1
+        \[
+			  a \otimes (b \otimes 1) = (a \otimes b) \otimes 1      
+        \]
+        \[
+			  a \otimes b = a \otimes b 
+        \]
+        Hi Inductiva: c = n + 1
+        \[
+			a \otimes (b \otimes (n + 1)) = (a \otimes b) \otimes (n + 1)		        
+        \]
+        \[
+			a \otimes (bn + b)) = abn + ab		        
+        \]
+        \[
+			abn + ab - ab = abn + ab - ab		        
+        \]
+        \[
+			abn = abn		        
+        \]
+        \item{$(a\oplus b)\otimes c = (a\otimes c) \oplus (b \otimes c)$}\\
+        Hi inductiva
+        \[
+			((a + b) \otimes (n + 1)) = (a \otimes (n + 1) + (b \otimes (n + 1)))        
+        \]
+        \[
+			an + b + a + bn = an + a + bn + b        
+        \]
+        \[
+			(an + bn) + a + b = an + bn + a + b
+        \]
+        \[
+			n(a + b) + a + b = n(a + b) + a + b			
+        \]
+        \[
+			n(a + b) + a + b - a - b = n(a + b) + a + b - a - b			
+        \]
+        \[
+			n(a + b) = n(a + b)			
+        \]
+\end{itemize}
+
+
+
+\end{document}
